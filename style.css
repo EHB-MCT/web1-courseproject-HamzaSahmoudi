@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap");
+
+body {
+	margin: 0;
+	font-family: "Oxygen", sans-serif;
+	background-color: #f2c96c;
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding-top: 65px;
+}
+
+header {
+	background-color: black;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 999;
+	border-bottom: 5px solid white;
+}
+
+.menu {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 100px;
+	list-style: none;
+	font-size: 20px;
+}
+
+li a {
+	color: white;
+	text-decoration: none;
+	font-size: 25px;
+	border: none;
+	background: none;
+	font-weight: 600;
+	font-family: "Oxygen", sans-serif;
+}
+li a::before {
+	margin-left: auto;
+}
+
+li a::after,
+li a::before {
+	content: "";
+	width: 0%;
+	height: 2px;
+	background: #f2c96c;
+	display: block;
+	transition: 0.5s;
+}
+
+li a:hover::after,
+li a:hover::before {
+	width: 100%;
+}
+
+.first {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-left: 6px solid black;
+	border-right: 5px solid black;
+	padding: 50px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.first-text {
+	flex: 1;
+	padding-right: 50px;
+	color: white;
+	text-align: center;
+	font-size: 20px;
+}
+
+.first-text h1 {
+	font-size: 70px;
+	color: black;
+	border-bottom: 5px solid black;
+	display: inline-block;
+}
+
+.first-image {
+	flex: 1;
+	text-align: right;
+}
+.first-image img {
+	max-width: 100%;
+	height: auto;
+	border: 5px solid white;
+	border-radius: 10px;
+}
+
+.hobby {
+	width: 100%;
+	margin: 0 auto;
+	background-color: black;
+	position: relative;
+	padding-bottom: 50px;
+	border: 5px solid white;
+	border-right: 5px solid white;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.info {
+	color: #fff;
+	width: 230%;
+	display: block;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.column {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.column div {
+	width: calc(50% - 20px);
+	max-width: 200px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+	margin-right: 25%;
+}
+
+.hobby h4 {
+	font-size: 30px;
+	font-weight: bold;
+	color: #f2c96c;
+}
+.hobby h3 {
+	text-align: center;
+	margin-top: 5%;
+	margin-bottom: 100px;
+	font-size: 50px;
+	font-weight: bold;
+	color: #f2c96c;
+}
+
+.hobby p {
+	text-align: center;
+}
+
+.image {
+	width: 230%;
+	display: block;
+	margin: 0;
+	border: 5px solid white;
+	border-radius: 100px;
+}
+
+.knowmore {
+	background-color: #f2c96c;
+	text-align: center;
+	padding: 50px 0;
+	border-left: 6px solid black;
+	border-right: 6px solid black;
+	border-bottom: 8px solid black;
+	margin-bottom: 0 auto;
+}
+.knowmore h3 {
+	text-align: center;
+	margin-bottom: 100px;
+	font-size: 50px;
+	font-weight: bold;
+	color: black;
+}
+.knowmore a {
+	display: inline-block;
+	background-color: black;
+	padding: 20px 30px;
+	border-radius: 100px;
+	color: #f2c96c;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 25px;
+	font-weight: bold;
+	letter-spacing: 3px;
+}
+
+.knowmore a::before {
+	margin-left: auto;
+}
+
+.knowmore a::after {
+	content: "";
+	width: 0%;
+	height: 2px;
+	background: #f2c96c;
+	display: block;
+	transition: 0.5s;
+}
+
+.knowmore a:hover::after {
+	width: 100%;
+}
