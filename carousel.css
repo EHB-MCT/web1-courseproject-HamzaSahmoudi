@@ -1,0 +1,660 @@
+/* BRON CAROUSEL https://codepen.io/pascaloliv/pen/LVZaeE*/
+
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap");
+
+body {
+	margin: 0;
+	font-family: "Oxygen", sans-serif;
+	background-color: black;
+}
+header {
+	background-color: black;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 999;
+	border-bottom: 5px solid white;
+}
+
+.menu {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 100px;
+	list-style: none;
+	font-size: 20px;
+	margin-right: 15px;
+}
+
+li a {
+	color: white;
+	text-decoration: none;
+	font-size: 25px;
+	border: none;
+	background: none;
+	font-weight: 600;
+	font-family: "Oxygen", sans-serif;
+}
+li a::before {
+	margin-left: auto;
+}
+
+li a::after,
+a::before {
+	content: "";
+	width: 0%;
+	height: 2px;
+	background: #f2c96c;
+	display: block;
+	transition: 0.5s;
+}
+
+li a:hover::after,
+li a:hover::before {
+	width: 100%;
+}
+.actief li a {
+	color: #fbe63a;
+}
+
+@-webkit-keyframes slidein {
+	0% {
+		top: -400px;
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		top: 0px;
+	}
+}
+@keyframes slidein {
+	0% {
+		top: -400px;
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		top: 0px;
+	}
+}
+@-webkit-keyframes slideout {
+	0% {
+		top: 0;
+		opacity: 1;
+	}
+	100% {
+		top: -400px;
+		opacity: 0;
+	}
+}
+@keyframes slideout {
+	0% {
+		top: 0;
+		opacity: 1;
+	}
+	100% {
+		top: -400px;
+		opacity: 0;
+	}
+}
+body {
+	background-image: url(Images/Tape-PNG-Transparent.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	font-family: "Tahoma";
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+body #scene {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	width: 1000px;
+	height: 650px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background-color: #fbe63a;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+	overflow: hidden;
+	border: 4px solid white;
+	margin-top: 10%;
+}
+body #scene #left-zone {
+	background: #bla;
+	height: 75%;
+	flex-grow: 0;
+	display: flex;
+	width: 350px;
+	align-items: center;
+	justify-content: left;
+}
+body #scene #left-zone .list {
+	display: flex;
+	list-style: none;
+	align-content: stretch;
+	flex-direction: column;
+	flex-grow: 1;
+	margin: 0;
+	padding: 0;
+}
+body #scene #left-zone .list li.item input[type="radio"] {
+	display: none;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ label {
+	display: block;
+	opacity: 0.5;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ label:first-letter {
+	text-transform: uppercase;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ label:hover {
+	opacity: 0.75;
+	cursor: pointer;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ label.label_Cooking:before {
+	content: " ";
+	display: block;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin-left: 50px;
+	background-image: url(Images/cooking-icoon.png);
+	background-position: center;
+	background-size: 75% 75%;
+	background-repeat: no-repeat;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ label.label_expo:before {
+	content: " ";
+	display: block;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin-left: 50px;
+	background-image: url(Images/expo-icoon.png);
+	background-position: center;
+	background-size: 75% 75%;
+	background-repeat: no-repeat;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ label.label_minouch:before {
+	content: " ";
+	display: block;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin-left: 50px;
+	background-image: url(Images/cat-icoon.png);
+	background-position: center;
+	background-size: 75% 75%;
+	background-repeat: no-repeat;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ label.label_dandelion:before {
+	content: " ";
+	display: block;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin-left: 50px;
+	background-image: url(Images/flower-icoon.png);
+	background-position: center;
+	background-size: 75% 75%;
+	background-repeat: no-repeat;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ label.label_sky:before {
+	content: " ";
+	display: block;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin-left: 50px;
+	background-image: url(Images/sunset-icoon.png);
+	background-position: center;
+	background-size: 75% 75%;
+	background-repeat: no-repeat;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ label.label_moon:before {
+	content: " ";
+	display: block;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin-left: 50px;
+	background-image: url(Images/moon-icoon.png);
+	background-position: center;
+	background-size: 75% 75%;
+	background-repeat: no-repeat;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ label.label_graduate:before {
+	content: " ";
+	display: block;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin-left: 50px;
+	background-image: url(Images/graduate-icoon.png);
+	background-position: center;
+	background-size: 75% 75%;
+	background-repeat: no-repeat;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ label.label_manga:before {
+	content: " ";
+	display: block;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin-left: 50px;
+	background-image: url(Images/manga-icoon.png);
+	background-position: center;
+	background-size: 75% 75%;
+	background-repeat: no-repeat;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ label.label_food:before {
+	content: " ";
+	display: block;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin-left: 50px;
+	background-image: url(Images/food-icoon.png);
+	background-position: center;
+	background-size: 75% 75%;
+	background-repeat: no-repeat;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ label.label_friends:before {
+	content: " ";
+	display: block;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin-left: 50px;
+	background-image: url(Images/friends-icoon.png);
+	background-position: center;
+	background-size: 75% 75%;
+	background-repeat: no-repeat;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ label.label_city:before {
+	content: " ";
+	display: block;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin-left: 50px;
+	background-image: url(Images/city-icoon.png);
+	background-position: center;
+	background-size: 75% 75%;
+	background-repeat: no-repeat;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ label.label_art:before {
+	content: " ";
+	display: block;
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin-left: 50px;
+	background-image: url(Images/Art.png);
+	background-position: center;
+	background-size: 75% 75%;
+	background-repeat: no-repeat;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ .content {
+	position: absolute;
+	left: 350px;
+	top: -600px;
+	width: 650px;
+	height: 600px;
+	-webkit-animation-duration: 0.75s;
+	animation-duration: 0.75s;
+	-webkit-animation-name: slideout;
+	animation-name: slideout;
+	-webkit-animation-timing-function: ease-out;
+	animation-timing-function: ease-out;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ .content.content_Cooking .picto {
+	height: 300px;
+	width: 250px;
+	background-image: url(Images/Cook.jpeg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: 5px solid white;
+	border-radius: 10px;
+}
+
+body #scene #left-zone .list li.item input[type="radio"] ~ .content.content_expo .picto {
+	height: 300px;
+	width: 250px;
+	background-image: url(Images/Expo.jpeg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: 5px solid white;
+	border-radius: 10px;
+}
+
+body #scene #left-zone .list li.item input[type="radio"] ~ .content.content_minouch .picto {
+	height: 300px;
+	width: 250px;
+	background-image: url(Images/Cat.jpeg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: 5px solid white;
+	border-radius: 10px;
+}
+
+body #scene #left-zone .list li.item input[type="radio"] ~ .content.content_dandelion .picto {
+	height: 300px;
+	width: 250px;
+	background-image: url(Images/One.jpeg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: 5px solid white;
+	border-radius: 10px;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ .content.content_sky .picto {
+	height: 300px;
+	width: 250px;
+	background-image: url(Images/Sky.jpeg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: 5px solid white;
+	border-radius: 10px;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ .content.content_moon .picto {
+	height: 300px;
+	width: 250px;
+	background-image: url(Images/Moon.jpeg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: 5px solid white;
+	border-radius: 10px;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ .content.content_graduate .picto {
+	height: 300px;
+	width: 250px;
+	background-image: url(Images/Promote.jpeg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: 5px solid white;
+	border-radius: 10px;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ .content.content_manga .picto {
+	height: 300px;
+	width: 250px;
+	background-image: url(Images/Manga.jpeg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: 5px solid white;
+	border-radius: 10px;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ .content.content_food .picto {
+	height: 300px;
+	width: 250px;
+	background-image: url(Images/Food.jpeg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: 5px solid white;
+	border-radius: 10px;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ .content.content_friends .picto {
+	height: 300px;
+	width: 250px;
+	background-image: url(Images/Friends.jpeg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: 5px solid white;
+	border-radius: 10px;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ .content.content_city .picto {
+	height: 300px;
+	width: 250px;
+	background-image: url(Images/Dos2.jpeg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: 5px solid white;
+	border-radius: 10px;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ .content.content_art .picto {
+	height: 300px;
+	width: 250px;
+	background-image: url(Images/Kunst.jpeg);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: 5px solid white;
+	border-radius: 10px;
+}
+
+body #scene #left-zone .list li.item input[type="radio"] ~ .content h1:first-letter {
+	text-transform: uppercase;
+}
+body #scene #left-zone .list li.item input[type="radio"] ~ .content p {
+	max-width: 50%;
+	text-align: center;
+}
+body #scene #left-zone .list li.item input[type="radio"]:checked ~ label {
+	opacity: 1;
+	-webkit-animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+body #scene #left-zone .list li.item input[type="radio"]:checked ~ label.label_Cooking {
+	color: white;
+	border-right: solid 5px white;
+}
+body #scene #left-zone .list li.item input[type="radio"]:checked ~ label.label_expo {
+	color: white;
+	border-right: solid 5px white;
+}
+body #scene #left-zone .list li.item input[type="radio"]:checked ~ label.label_minouch {
+	color: white;
+	border-right: solid 5px white;
+}
+body #scene #left-zone .list li.item input[type="radio"]:checked ~ label.label_dandelion {
+	color: white;
+	border-right: solid 5px white;
+}
+body #scene #left-zone .list li.item input[type="radio"]:checked ~ label.label_sky {
+	color: white;
+	border-right: solid 5px white;
+}
+body #scene #left-zone .list li.item input[type="radio"]:checked ~ label.label_moon {
+	color: white;
+	border-right: solid 5px white;
+}
+body #scene #left-zone .list li.item input[type="radio"]:checked ~ label.label_graduate {
+	color: white;
+	border-right: solid 5px white;
+}
+body #scene #left-zone .list li.item input[type="radio"]:checked ~ label.label_manga {
+	color: white;
+	border-right: solid 5px white;
+}
+body #scene #left-zone .list li.item input[type="radio"]:checked ~ label.label_food {
+	color: white;
+	border-right: solid 5px white;
+}
+body #scene #left-zone .list li.item input[type="radio"]:checked ~ label.label_friends {
+	color: white;
+	border-right: solid 5px white;
+}
+body #scene #left-zone .list li.item input[type="radio"]:checked ~ label.label_city {
+	color: white;
+	border-right: solid 5px white;
+}
+body #scene #left-zone .list li.item input[type="radio"]:checked ~ label.label_art {
+	color: white;
+	border-right: solid 5px white;
+}
+body #scene #left-zone .list li.item input[type="radio"]:checked ~ .content {
+	-webkit-animation-duration: 0.75s;
+	animation-duration: 0.75s;
+	-webkit-animation-name: slidein;
+	animation-name: slidein;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	-webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+body #scene #middle-border {
+	background-color: BLACK;
+	height: 95%;
+	flex-grow: 1;
+	max-width: 4px;
+	z-index: 0;
+}
+body #scene #right-zone {
+	background: #fbe63a;
+	height: 100%;
+	flex-grow: 3;
+}
+
+body #scene #left-zone .list li.item input[type="radio"] ~ .content p {
+	text-align: left;
+	margin-top: 30px;
+	font-weight: bold;
+}
+
+label {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.menu-toggle {
+	display: none;
+	cursor: pointer;
+	color: white;
+	font-size: 24px;
+}
+
+@media only screen and (max-width: 768px) {
+	body {
+		background-attachment: fixed;
+		background-position: center;
+		height: 100vh;
+		width: 100%;
+		margin: 0;
+		overflow-x: hidden;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	.menu-toggle {
+		display: block;
+		cursor: pointer;
+		color: white;
+		font-size: 24px;
+		position: fixed;
+		top: 15px;
+		left: 20px;
+		z-index: 1000;
+	}
+
+	.menu.active {
+		display: flex;
+		flex-direction: column;
+		background-color: black;
+		position: fixed;
+		top: 0px;
+		width: 110%;
+		padding: 20px 0;
+		text-align: center;
+	}
+
+	.picto {
+		max-width: 100%;
+		height: auto;
+	}
+
+	body #scene {
+		width: 90%;
+		height: 80%;
+		margin-top: 100px;
+	}
+	body #scene div {
+		width: 100%;
+	}
+
+	body #scene #right-zone {
+		background: #fbe63a;
+		height: 10%;
+		flex-grow: 3;
+		margin-right: 50px;
+	}
+	body #scene #left-zone .list li.item input[type="radio"] ~ .content {
+		position: absolute;
+		left: 0px;
+		top: -700px;
+		width: 550px;
+		height: 750px;
+		-webkit-animation-duration: 0.75s;
+		animation-duration: 0.75s;
+		-webkit-animation-name: slideout;
+		animation-name: slideout;
+		-webkit-animation-timing-function: ease-out;
+		animation-timing-function: ease-out;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+	.picto {
+		max-width: 200px;
+		max-height: 200px;
+	}
+	P {
+		width: 35%;
+		max-height: 200px;
+	}
+	body #scene #left-zone .list li.item input[type="radio"] ~ .content {
+		pointer-events: none;
+	}
+
+	body #scene #left-zone .list li.item input[type="radio"] ~ label.label_Cooking:before,
+	body #scene #left-zone .list li.item input[type="radio"] ~ label.label_expo:before,
+	body #scene #left-zone .list li.item input[type="radio"] ~ label.label_minouch:before,
+	body #scene #left-zone .list li.item input[type="radio"] ~ label.label_art:before,
+	body #scene #left-zone .list li.item input[type="radio"] ~ label.label_dandelion:before,
+	body #scene #left-zone .list li.item input[type="radio"] ~ label.label_sky:before,
+	body #scene #left-zone .list li.item input[type="radio"] ~ label.label_moon:before,
+	body #scene #left-zone .list li.item input[type="radio"] ~ label.label_graduate:before,
+	body #scene #left-zone .list li.item input[type="radio"] ~ label.label_manga:before,
+	body #scene #left-zone .list li.item input[type="radio"] ~ label.label_food:before,
+	body #scene #left-zone .list li.item input[type="radio"] ~ label.label_friends:before,
+	body #scene #left-zone .list li.item input[type="radio"] ~ label.label_city:before {
+		display: none;
+	}
+	body {
+		background-attachment: fixed;
+		background-position: center;
+		height: 100%;
+		width: 100%;
+	}
+}

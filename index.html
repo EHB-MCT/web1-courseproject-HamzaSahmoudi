@@ -9,73 +9,78 @@
 	<body>
 		<div class="wrapper">
 			<header>
+				<div class="menu-toggle">&#9776;</div>
 				<ul class="menu">
-					<li>
-						<a href="index.html">HOME</a>
-					</li>
+					<div class="actief">
+						<li>
+							<a href="index.html">HOME</a>
+						</li>
+					</div>
 					<li>
 						<a href="Portfolio.html">PORTFOLIO</a>
 					</li>
+
 					<li>
 						<a href="More.html">MORE</a>
 					</li>
 				</ul>
 			</header>
-			<div class="first">
-				<div class="first-text">
-					<h1>Who am I ?</h1>
-					<h2>Hi there! I'm Hamza, a 19-year-old who loves to embrace life with a calm and joyous spirit. My world is filled with diverse interests and countless passions. If you're curious to explore more about me, take a peek at my page!</h2>
+			<div class="rotate">
+				<div class="first">
+					<div class="first-text">
+						<h3>WHO AM I ?</h3>
+						<h2>Hi there! I'm Hamza, a 19-year-old who loves to embrace life with a calm and joyous spirit. My world is filled with diverse interests and countless passions. If you're curious to explore more about me, take a peek at my page!</h2>
+						<a href="Portfolio.html">MY WORLD!</a>
+					</div>
+					<div class="first-image">
+						<img src="Images/Front.jpeg" />
+					</div>
 				</div>
-				<div class="first-image">
-					<img src="Images/first-image.JPG" />
+				<h3>MY HOBBIES</h3>
+			</div>
+			<div class="column-1">
+				<div>
+					<img class="image" src="Images/Sport.jpg" />
+					<h4>SPORT</h4>
+					<p>
+						<span class="info"
+							>The gym isn't just a place to train; it's my sanctuary. Music blaring, I immerse myself in a world of strength-building. Every session is about sculpting my muscles, reaching new levels of strength. And it's better with friends by my
+							side. There's this competition between us, a friendly rivalry that drives us to excel.</span
+						>
+					</p>
+				</div>
+				<div>
+					<img class="image" src="Images/Gaming.jpg" />
+					<h4>GAMING</h4>
+					<p>
+						<span class="info"
+							>Gaming isn't just a hobby; it's my passion.I would have loved to be a pro player, chasing that dream every day. When I'm gaming with friends, it's a mix of laughter, intense focus, and endless conversations. It's my ultimate relaxation
+							and a source of pure joy—a world where I find solace and endless excitement.</span
+						>
+					</p>
 				</div>
 			</div>
-			<div class="hobby">
-				<h3>MY HOBBIES</h3>
-				<div class="column">
-					<div>
-						<img class="image" src="Images/Sport.jpg" />
-						<h4>SPORT</h4>
-						<p>
-							<span class="info"
-								>The gym isn't just a place to train; it's my sanctuary. Music blaring, I immerse myself in a world of strength-building. Every session is about sculpting my muscles, reaching new levels of strength. And it's better with friends by my
-								side. There's this competition between us, a friendly rivalry that drives us to excel. If my friend's a step ahead, it fuels me to push my limits and surpass expectations, just as I do for them. Together, we're on a relentless pursuit
-								of self-improvement.</span
-							>
-						</p>
-					</div>
-					<div>
-						<img class="image" src="Images/Gaming.jpg" />
-						<h4>GAMING</h4>
-						<p>
-							<span class="info"
-								>Gaming isn't just a hobby; it's my passion.I would have loved to be a pro player, chasing that dream every day. When I'm gaming with friends, it's a mix of laughter, intense focus, and endless conversations. It's my ultimate
-								relaxation and a source of pure joy—a world where I find solace and endless excitement.</span
-							>
-						</p>
-					</div>
+
+			<div class="column">
+				<div>
+					<img class="image" src="Images/Anime.jpg" />
+					<h4>ANIME</h4>
+					<p>
+						<span class="info"
+							>Anime was the cornerstone of my childhood, a world my father introduced me to. I immersed myself in many anime series, captivated by their diversity. What I love about anime is its ability to evoke a wide range of emotions. It's more
+							than just entertainment, it's like traveling through the anime.</span
+						>
+					</p>
 				</div>
-				<div class="column">
-					<div>
-						<img class="image" src="Images/Anime.jpg" />
-						<h4>ANIME</h4>
-						<p>
-							<span class="info"
-								>Anime was the cornerstone of my childhood, a world my father introduced me to. I immersed myself in many anime series, captivated by their diversity. What I love about anime is its ability to evoke a wide range of emotions. Each
-								series is a rollercoaster that takes me through laughter, tears, excitement and introspection. It's more than just entertainment, it's like traveling through the anime.</span
-							>
-						</p>
-					</div>
-					<div>
-						<img class="image" src="Images/drawing.jpg" />
-						<h4>DRAWING</h4>
-						<p>
-							<span class="info"
-								>I've loved drawing since I was little. I draw more Japanese anime because I like it. A dream is to make a manga even if the dream is a bit complicated. Drawing anime brings me joy and inspiration. I hope to one day share my own
-								unique stories through the captivating art of manga.</span
-							>
-						</p>
-					</div>
+				<div>
+					<img class="image" src="Images/drawing.jpg" />
+					<h4>DRAWING</h4>
+					<p>
+						<span class="info"
+							>I've loved drawing since I was little. I draw more Japanese anime because I like it. A dream is to make a manga even if the dream is a bit complicated. Drawing anime brings me joy and inspiration. I hope to one day share my own unique
+							stories through the captivating art of manga.</span
+						>
+					</p>
 				</div>
 			</div>
 			<div class="knowmore">
@@ -84,4 +89,12 @@
 			</div>
 		</div>
 	</body>
+	<script>
+		const menuToggle = document.querySelector(".menu-toggle");
+		const menu = document.querySelector(".menu");
+
+		menuToggle.addEventListener("click", function () {
+			menu.classList.toggle("active");
+		});
+	</script>
 </html>
